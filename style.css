@@ -363,3 +363,34 @@ button:focus {
         padding: 16px 24px;
     }
 }
+
+/* Keep topic navigation visible while scrolling */
+body > nav {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: 35vh;
+    overflow-y: auto;
+    z-index: 9999;
+    margin: 0;
+    border-radius: 0 0 12px 12px;
+}
+
+/* Make space for the fixed navigation */
+body {
+    padding-top: 180px;
+}
+
+/* Mobile screens */
+@media screen and (max-width: 600px) {
+    body {
+        padding-top: 220px;
+    }
+
+    body > nav {
+        max-height: 40vh;
+    }
+}
+
