@@ -1,128 +1,96 @@
-Yar ❤️ ab mujhe tumhari poori CSS mil gayi hai. Masla mil gaya hai! Tumhari file ke aakhir mein purane aur naye     border-top-color: #0f766e;
-    background: #ffffff;
+/* SMART GRAMMAR - RESPONSIVE STYLESHEET */
+
+* {
+    box-sizing: border-box;
 }
 
-.tips-section {
-    border-top-color: #ea580c;
+html {
+    width: 100%;
+    max-width: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 12px;
 }
 
-.tips-section ul {
-    padding: 20px 28px;
-    border-radius: 12px;
-    background: #fff7ed;
-}
-
-.tips-section li {
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    background: linear-gradient(135deg, #eef2ff, #f0fdf4);
+    color: #1e293b;
+    font-family: Arial, sans-serif;
     font-size: 16px;
+    line-height: 1.7;
+    letter-spacing: normal;
 }
 
-#practice-exercises {
-    border-top-color: #2563eb;
-}
-
-#practice-exercises h2 {
+h1 {
+    margin: 28px 12px;
+    color: #4f46e5;
+    font-size: 36px;
+    line-height: 1.25;
     text-align: center;
+    overflow-wrap: anywhere;
 }
 
-a:focus,
-button:focus {
-    outline: 2px solid #2563eb;
-    outline-offset: 3px;
+h2 {
+    margin: 0 0 18px;
+    padding-bottom: 10px;
+    color: #4f46e5;
+    font-size: 28px;
+    line-height: 1.35;
+    border-bottom: 2px solid #c7d2fe;
+    overflow-wrap: anywhere;
 }
 
-/* MOBILE LAYOUT */
-@media screen and (max-width: 600px) {
-    body {
-        font-size: 16px;
-        line-height: 1.65;
-    }
-
-    h1 {
-        margin: 20px 10px;
-        font-size: 28px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    h3 {
-        font-size: 19px;
-    }
-
-    section,
-    .grammar-topic,
-    .tense-card {
-        width: auto;
-        max-width: none;
-        margin: 12px 8px;
-        padding: 16px 12px;
-        border-radius: 12px;
-    }
-
-    nav {
-        position: sticky;
-        position: -webkit-sticky;
-        top: 0;
-        z-index: 1000;
-        padding: 10px 6px;
-        margin-top: 0;
-        border-radius: 0 0 12px 12px;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 3px;
-        padding: 8px 9px;
-        font-size: 13px;
-        white-space: normal;
-    }
-
-    p,
-    li,
-    th,
-    td {
-        font-size: 16px;
-    }
-
-    section table {
-        display: block;
-        max-width: 100%;
-        overflow-x: auto;
-    }
-
-    .creator-card {
-        flex-direction: column;
-        gap: 14px;
-        padding: 16px;
-        text-align: center;
-    }
-
-    .creator-photo {
-        flex-basis: 110px;
-        width: 110px;
-        height: 110px;
-    }
-
-    .creator-info h3 {
-        font-size: 23px;
-    }
-
-    .tips-section ul {
-        padding: 16px 24px;
-    }
+h3 {
+    margin: 22px 0 10px;
+    color: #0f766e;
+    font-size: 22px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
 }
-Smart Grammar — Clean CSS
 
-Poora saaf code · 370 lines
+h4 {
+    color: #ea580c;
+}
 
-Yahan se nayi CSS file kholo
+p {
+    margin: 0 0 14px;
+    font-size: 16px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
 
-1. Pehle apni purani `style.css` ka backup bana lo.
-2. Upar wali nayi file kholo aur uska poora code copy karo.
-3. Apni purani `style.css` kholo, uska saara purana code hata kar naya code paste karo.
-4. Save karo aur website refresh karo.
+section,
+.grammar-topic,
+.tense-card {
+    width: auto;
+    max-width: 1100px;
+    min-width: 0;
+    margin: 24px auto;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-top: 5px solid #2563eb;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(79, 70, 229, 0.10);
+    scroll-margin-top: 12px;
+}
 
-Is tarah purane conflicting codes bhi khatam ho jayenge. Navigation ki styling aur mobile layout bhi rakha gaya hai.
+section p {
+    max-width: 100%;
+}
 
-Phir check karna: upar ka white gap kam hua ya nahi, navigation scroll karte waqt saath chalti hai ya nahi, aur har topic click karne par khulta hai ya nahi. Agar gap phir bhi rahe, to woh HTML ke kisi aur element ki wajah se ho sakta hai. ❤️
+section ul,
+section ol,
+ul,
+ol {
+    padding-left: 28px;
+}
+
+li {
+    margin-bottom: 9px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
