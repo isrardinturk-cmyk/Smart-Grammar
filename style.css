@@ -397,3 +397,16 @@ body > nav a:hover {
     }
 }
 
+/* Topic heading navigation ke neeche na chupe */
+html {
+    scroll-padding-top: 100px;
+}
+
+section,
+.grammar-topic,
+.tense-card,
+[id] {
+    scroll-margin-top: 100px;
+}
+
+
