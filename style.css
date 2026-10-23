@@ -305,6 +305,38 @@ body > nav {
     body {
         padding-top: 0 !important;
     }
+    
+/* FIX MOBILE CAMERA GAP + STICKY NAVIGATION */
+
+@media (max-width: 600px) {
+    body > nav {
+        position: sticky !important;
+        top: 30px !important;
+
+        /* Keep your original navigation colors */
+        background: linear-gradient(
+            90deg,
+            #4f46e5,
+            #2563eb,
+            #0891b2
+        ) !important;
+
+        z-index: 9999 !important;
+        width: 100% !important;
+        margin-top: 30px !important;
+    }
+
+    body > nav a {
+        color: #ffffff !important;
+        background: rgba(255, 255, 255, 0.16) !important;
+    }
+
+    body > nav a:hover {
+        background: #ffffff !important;
+        color: #2563eb !important;
+    }
+}
+
 
     html {
         scroll-padding-top: 12px;
