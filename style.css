@@ -409,4 +409,38 @@ section,
     scroll-margin-top: 100px;
 }
 
+/* Back to Top button */
+a[href="#top"] {
+    display: block;
+    width: fit-content;
+    margin: 24px auto;
+    padding: 10px 20px;
+    background: #2563eb;
+    color: #ffffff !important;
+    border-radius: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+}
+
+a[href="#top"]:hover {
+    background: #4f46e5;
+}
+
+/* Camera/status bar ke peeche matching blue background */
+@media (max-width: 600px) {
+    html {
+        background: #4f46e5;
+    }
+
+    body {
+        padding-top: 0;
+    }
+
+    body > nav {
+        margin-top: 0 !important;
+    }
+}
+
+
 
