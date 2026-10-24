@@ -689,6 +689,19 @@ body h1 + p + h2 + p + h2 + p + h3 + ul {
     }
 }
 
+/* What is latter aur Types of latter ko box mein rakho */
+body h2:nth-of-type(3),
+body h2:nth-of-type(3) + p,
+body h2:nth-of-type(3) + p + h3,
+body h2:nth-of-type(3) + p + h3 + ul {
+    background: #ffffff !important;
+    width: calc(100% - 24px);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px;
+}
+
+
 
 
 
