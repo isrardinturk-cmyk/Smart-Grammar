@@ -731,6 +731,19 @@ h3 {
     border-radius: 12px !important;
 }
 
+/* Smart Quiz, Next Question, Restart Quiz */
+#smartQuiz,
+#nextQuestion,
+#restartQuiz,
+button {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: 1px solid #1d4ed8;
+    border-radius: 8px;
+    padding: 8px 14px;
+}
+
+
 
 
 
