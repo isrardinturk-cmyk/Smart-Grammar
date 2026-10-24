@@ -621,6 +621,75 @@ h1 {
     outline: 4px solid red !important;
 }
 
+/* WHAT IS LATTER - HEADING AND TEXT BOX */
+body h1 + p + h2 + p + h2,
+body h1 + p + h2 + p + h2 + p {
+    width: calc(100% - 24px) !important;
+    max-width: 1100px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 16px !important;
+    background: #ffffff !important;
+    border-left: 1px solid #e2e8f0 !important;
+    border-right: 1px solid #e2e8f0 !important;
+}
+
+/* WHAT IS LATTER heading */
+body h1 + p + h2 + p + h2 {
+    margin-top: 20px !important;
+    margin-bottom: 0 !important;
+    border: 1px solid #e2e8f0 !important;
+    border-bottom: 2px solid #c7d2fe !important;
+    border-radius: 14px 14px 0 0 !important;
+}
+
+/* Latter paragraph */
+body h1 + p + h2 + p + h2 + p {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    border-bottom: none !important;
+}
+
+/* Types of latter and its list */
+body h1 + p + h2 + p + h2 + p + h3,
+body h1 + p + h2 + p + h2 + p + h3 + ul {
+    width: calc(100% - 24px) !important;
+    max-width: 1100px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 16px !important;
+    background: #ffffff !important;
+    border-left: 1px solid #e2e8f0 !important;
+    border-right: 1px solid #e2e8f0 !important;
+}
+
+/* Types heading */
+body h1 + p + h2 + p + h2 + p + h3 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    border-top: none !important;
+}
+
+/* List ke neeche box ka rounded end */
+body h1 + p + h2 + p + h2 + p + h3 + ul {
+    margin-top: 0 !important;
+    margin-bottom: 24px !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    border-radius: 0 0 14px 14px !important;
+}
+
+@media (max-width: 600px) {
+    body h1 + p + h2 + p + h2,
+    body h1 + p + h2 + p + h2 + p,
+    body h1 + p + h2 + p + h2 + p + h3,
+    body h1 + p + h2 + p + h2 + p + h3 + ul {
+        width: calc(100% - 24px) !important;
+        padding: 14px !important;
+        overflow-wrap: anywhere !important;
+    }
+}
+
+
 
 
 
