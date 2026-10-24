@@ -442,5 +442,65 @@ a[href="#top"]:hover {
     }
 }
 
+/* 1. Smart Grammar heading ko box mein rakho */
+h1 {
+    width: calc(100% - 32px);
+    max-width: 680px;
+    margin: 24px auto 16px;
+    padding: 16px 12px;
+    text-align: center;
+    background: #ffffff;
+    border: 2px solid #c7d2fe;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.10);
+    overflow-wrap: anywhere;
+}
+
+/* 2. Welcome paragraph ko box mein rakho */
+body > p:first-of-type {
+    width: calc(100% - 32px);
+    max-width: 680px;
+    margin: 16px auto 24px;
+    padding: 16px;
+    background: #ffffff;
+    border: 1px solid #c7d2fe;
+    border-radius: 14px;
+    overflow-wrap: anywhere;
+}
+
+/* 3. What is Grammar? ke neeche content box */
+section,
+.grammar-topic,
+.tense-card {
+    width: calc(100% - 32px);
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 4. Mobile screen par content bahar na nikle */
+@media (max-width: 600px) {
+    h1 {
+        width: calc(100% - 24px);
+        margin-top: 20px;
+        padding: 14px 10px;
+        font-size: 30px;
+    }
+
+    body > p:first-of-type {
+        width: calc(100% - 24px);
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    section,
+    .grammar-topic,
+    .tense-card {
+        width: calc(100% - 24px);
+        padding: 16px;
+    }
+}
+
+
 
 
