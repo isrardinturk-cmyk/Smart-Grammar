@@ -501,6 +501,67 @@ section,
     }
 }
 
+/* Smart Grammar heading ka box */
+h1 {
+    width: calc(100% - 24px);
+    max-width: 680px;
+    margin: 24px auto 16px;
+    padding: 14px;
+    text-align: center;
+    background: #ffffff;
+    border: 2px solid #c7d2fe;
+    border-radius: 14px;
+}
+
+/* Welcome paragraph ka box */
+h1 + p {
+    width: calc(100% - 24px);
+    max-width: 680px;
+    margin: 16px auto 24px;
+    padding: 16px;
+    background: #ffffff;
+    color: #1e293b;
+    border: 1px solid #c7d2fe;
+    border-radius: 14px;
+}
+
+/* What is Grammar? aur uske neeche wala text */
+h1 + p + h2,
+h1 + p + h2 + p {
+    width: calc(100% - 24px);
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px;
+    background: #ffffff;
+    border-radius: 12px;
+}
+
+h1 + p + h2 {
+    margin-bottom: 0;
+    border-bottom: 2px solid #c7d2fe;
+}
+
+h1 + p + h2 + p {
+    margin-top: 0;
+}
+
+/* Mobile screen ke liye */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    h1 + p,
+    h1 + p + h2,
+    h1 + p + h2 + p {
+        width: calc(100% - 24px);
+        padding: 14px;
+        overflow-wrap: anywhere;
+    }
+}
+
+
 
 
 
