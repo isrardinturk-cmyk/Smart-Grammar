@@ -561,6 +561,63 @@ h1 + p + h2 + p {
     }
 }
 
+/* SMART GRAMMAR BOX */
+body h1 {
+    display: block !important;
+    width: calc(100% - 24px) !important;
+    max-width: 680px !important;
+    margin: 24px auto 16px !important;
+    padding: 16px !important;
+    background: #ffffff !important;
+    border: 2px solid #c7d2fe !important;
+    border-radius: 14px !important;
+    text-align: center !important;
+}
+
+/* WELCOME BOX */
+body h1 + p {
+    display: block !important;
+    width: calc(100% - 24px) !important;
+    max-width: 680px !important;
+    margin: 16px auto 24px !important;
+    padding: 16px !important;
+    background: #ffffff !important;
+    border: 1px solid #c7d2fe !important;
+    border-radius: 14px !important;
+}
+
+/* WHAT IS GRAMMAR HEADING */
+body h1 + p + h2 {
+    width: calc(100% - 24px) !important;
+    margin: 20px auto 0 !important;
+    padding: 16px !important;
+    background: #ffffff !important;
+    border: 1px solid #c7d2fe !important;
+    border-radius: 14px 14px 0 0 !important;
+}
+
+/* GRAMMAR TEXT BOX */
+body h1 + p + h2 + p {
+    width: calc(100% - 24px) !important;
+    margin: 0 auto 24px !important;
+    padding: 16px !important;
+    background: #ffffff !important;
+    border: 1px solid #c7d2fe !important;
+    border-top: none !important;
+    border-radius: 0 0 14px 14px !important;
+}
+
+@media (max-width: 600px) {
+    body h1,
+    body h1 + p,
+    body h1 + p + h2,
+    body h1 + p + h2 + p {
+        width: calc(100% - 24px) !important;
+        overflow-wrap: anywhere !important;
+    }
+}
+
+
 
 
 
