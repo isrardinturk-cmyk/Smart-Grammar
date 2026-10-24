@@ -715,6 +715,23 @@ body h2:nth-of-type(2) + p + h3 ~ ul {
     margin-right: auto !important;
 }
 
+/* WHAT IS LATTER BOX */
+h2:nth-of-type(2) {
+    outline: 2px solid #c7d2fe !important;
+    background: white !important;
+    padding: 16px !important;
+    border-radius: 12px !important;
+}
+
+/* TYPES OF LATTER BOX */
+h3 {
+    background: white !important;
+    padding: 16px !important;
+    border: 2px solid #c7d2fe !important;
+    border-radius: 12px !important;
+}
+
+
 
 
 
