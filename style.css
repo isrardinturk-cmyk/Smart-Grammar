@@ -701,6 +701,21 @@ body h2:nth-of-type(3) + p + h3 + ul {
     padding: 16px;
 }
 
+/* What is latter aur Types of latter ke boxes */
+body h2:nth-of-type(2),
+body h2:nth-of-type(2) + p,
+body h2:nth-of-type(2) + p + h3,
+body h2:nth-of-type(2) + p + h3 ~ ul {
+    background: #ffffff !important;
+    border: 1px solid #c7d2fe !important;
+    border-radius: 12px !important;
+    padding: 16px !important;
+    width: calc(100% - 24px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+
 
 
 
