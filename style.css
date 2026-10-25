@@ -855,6 +855,47 @@ footer {
 body {
     padding-bottom: 35px !important;
 }
+/* Footer text ko center wale box mein rakho */
+footer {
+    width: calc(100% - 30px) !important;
+    max-width: 600px !important;
+    margin: 15px auto !important;
+    padding: 15px !important;
+    text-align: center !important;
+    background: #ffffff !important;
+    border: 1px solid #c7d2fe !important;
+    border-radius: 14px !important;
+    box-sizing: border-box !important;
+}
+
+/* Search bar ko footer ke neeche center karo */
+.search-box {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    width: calc(100% - 30px) !important;
+    max-width: 600px !important;
+    margin: 15px auto 25px !important;
+    padding: 0 !important;
+    position: relative !important;
+    top: 0 !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+}
+
+/* Mobile screen par search input fit rahe */
+#grammar-search {
+    width: auto !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 1 1 180px !important;
+}
+
+#searchButton {
+    flex-shrink: 0 !important;
+}
 
 
 
