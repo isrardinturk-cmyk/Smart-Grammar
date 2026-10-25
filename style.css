@@ -762,6 +762,13 @@ button {
     color: #1e293b !important;
     background: #ffffff !important;
 }
+/* Search bar ko mobile screen par upar lao */
+@media (max-width: 600px) {
+    body > input,
+    body > button {
+        margin-bottom: 35px !important;
+    }
+}
 
 
 
