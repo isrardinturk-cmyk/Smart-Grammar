@@ -769,6 +769,12 @@ button {
         margin-bottom: 35px !important;
     }
 }
+/* Search bar ko mobile screen par upar karo */
+input[placeholder*="Search grammar"],
+input[placeholder*="Search grammar"] + button {
+    position: relative !important;
+    top: -35px !important;
+}
 
 
 
