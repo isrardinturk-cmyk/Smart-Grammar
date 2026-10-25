@@ -807,6 +807,34 @@ a[href="#top"] + button {
 footer {
     margin-bottom: 45px !important;
 }
+/* Back to Top button ko thora upar lao */
+.back-to-top {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+/* Click Me button ki spacing */
+#welcomeButton {
+    margin-top: 10px !important;
+    margin-bottom: 15px !important;
+}
+
+/* Footer text ko poora visible rakho */
+footer {
+    position: relative !important;
+    margin-top: 10px !important;
+    margin-bottom: 15px !important;
+    padding-bottom: 10px !important;
+}
+
+/* Search bar footer ke neeche rahe */
+.search-box {
+    position: relative !important;
+    top: 0 !important;
+    transform: none !important;
+    margin: 10px auto 20px !important;
+    z-index: 10001 !important;
+}
 
 
 
