@@ -907,6 +907,18 @@ footer p {
     border-radius: 14px;
     box-sizing: border-box;
 }
+body footer p {
+    display: block !important;
+    width: calc(100% - 30px) !important;
+    max-width: 600px !important;
+    margin: 20px auto !important;
+    padding: 18px 10px !important;
+    text-align: center !important;
+    background-color: #ffffff !important;
+    border: 2px solid #c7d2fe !important;
+    border-radius: 14px !important;
+    box-sizing: border-box !important;
+}
 
 
 
