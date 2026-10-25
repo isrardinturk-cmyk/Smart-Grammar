@@ -753,6 +753,15 @@ button {
     border-radius: 8px !important;
     padding: 8px 14px !important;
 }
+/* Search section ko navigation ke neeche chhupne se bachao */
+#searchResult {
+    position: relative !important;
+    z-index: 10000 !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 20px !important;
+    color: #1e293b !important;
+    background: #ffffff !important;
+}
 
 
 
