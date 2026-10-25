@@ -775,6 +775,13 @@ input[placeholder*="Search grammar"] + button {
     position: relative !important;
     top: -35px !important;
 }
+/* Search bar ko upar lao */
+.search-box {
+    position: relative !important;
+    transform: translateY(-45px) !important;
+    z-index: 10001 !important;
+    margin-bottom: -45px !important;
+}
 
 
 
