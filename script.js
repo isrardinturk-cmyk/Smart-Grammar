@@ -1,40 +1,43 @@
-const button =
-document.getElementById("welcomeButton");
+document.addEventListener("DOMContentLoaded", function () {
+    const button = document.getElementById("welcomeButton");
+    const searchButton = document.getElementById("searchButton");
+    const searchInput = document.getElementById("grammar-search");
+    const message = document.getElementById("appMessage");
 
-button.addEventListener("click",function() {
-    alert("Welcome to Smart Grammar!👩‍🎓");
-});
-
-
-const searchButton =
-document.getElementById("searchButton");
-
-searchButton.addEventListener("click",function() {
-    const searchInput =
-
-document.querySelector(".search-box input");
-
-    const searchText =
-
-searchInput.value.trim().toLowerCase();
-
-    if (searchText === "") {
-        alert("Please enter a grammar topic.");
-        return;
+    if (button) {
+        button.addEventListener("click", function () {
+            if (message) {
+                message.textContent = "Welcome to Smart Grammar! 👩‍🎓";
+                message.scrollIntoView({ behavior: "smooth", block: "center" });
+            } else {
+                alert("Welcome to Smart Grammar! 👩‍🎓");
+            }
+        });
     }
 
-    const pageText =
+    if (searchButton && searchInput) {
+        searchButton.addEventListener("click", function () {
+            const searchText = searchInput.value.trim().toLowerCase();
 
-document.body.innerText.toLowerCase();
+            if (!message) return;
 
-    if (pageText.includes(searchText))
-{
-        alert("Topic found!🔎");
-    } else {
-        alert("Topic not found.😕");
-    }   
+            if (searchText === "") {
+                message.textContent = "Please enter a grammar topic.";
+                return;
+            }
+
+            const pageText = document.body.innerText.toLowerCase();
+
+            if (pageText.includes(searchText)) {
+                message.textContent = "Topic found! 🔎";
+            } else {
+                message.textContent = "Topic not found. 😕";
+            }
+
+            message.scrollIntoView({ behavior: "smooth", block: "center" });
+        });
+    }
 });
-
 
 // Smart Grammar Quiz
 
