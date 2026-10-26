@@ -1,43 +1,70 @@
+```javascript
 document.addEventListener("DOMContentLoaded", function () {
     const button = document.getElementById("welcomeButton");
     const searchButton = document.getElementById("searchButton");
     const searchInput = document.getElementById("grammar-search");
-    const message = document.getElementById("appMessage");
 
+    const messageBox = document.getElementById("appMessageBox");
+    const message = document.getElementById("appMessage");
+    const okButton = document.getElementById("messageOkButton");
+
+    // Welcome button
     if (button) {
         button.addEventListener("click", function () {
-            if (message) {
-                message.textContent = "Welcome to Smart Grammar! 👩‍🎓";
-                message.scrollIntoView({ behavior: "smooth", block: "center" });
-            } else {
-                alert("Welcome to Smart Grammar! 👩‍🎓");
-            }
+            showMessage("Welcome to Smart Grammar! 👩‍🎓");
         });
     }
 
+    // Search button
     if (searchButton && searchInput) {
         searchButton.addEventListener("click", function () {
             const searchText = searchInput.value.trim().toLowerCase();
 
-            if (!message) return;
-
             if (searchText === "") {
-                message.textContent = "Please enter a grammar topic.";
+                showMessage("Please enter a grammar topic.");
                 return;
             }
 
             const pageText = document.body.innerText.toLowerCase();
 
             if (pageText.includes(searchText)) {
-                message.textContent = "Topic found! 🔎";
+                showMessage("Topic found! 🔎");
             } else {
-                message.textContent = "Topic not found. 😕";
+                showMessage("Topic not found. 😕");
+            }
+        });
+    }
+
+    // Show message inside the centered box
+    function showMessage(text) {
+        if (messageBox && message) {
+            message.textContent = text;
+            messageBox.style.display = "block";
+
+            messageBox.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+        } else {
+            alert(text);
+        }
+    }
+
+    // OK button closes the message box
+    if (okButton) {
+        okButton.addEventListener("click", function () {
+            if (messageBox) {
+                messageBox.style.display = "none";
             }
 
-            message.scrollIntoView({ behavior: "smooth", block: "center" });
+            if (searchInput) {
+                searchInput.value = "";
+                searchInput.focus();
+            }
         });
     }
 });
+```
 
 // Smart Grammar Quiz
 
