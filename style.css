@@ -932,6 +932,35 @@ body footer p {
     border-radius: 10px;
     overflow-wrap: anywhere;
 }
+.message-box {
+    width: calc(100% - 30px);
+    max-width: 400px;
+    margin: 15px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    background: #ffffff;
+    border: 2px solid #c7d2fe;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.message-box p {
+    margin: 0 0 15px;
+    color: #1e293b;
+    font-size: 16px;
+    overflow-wrap: anywhere;
+}
+
+#messageOkButton {
+    padding: 9px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #4f46e5;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
 
 
 
