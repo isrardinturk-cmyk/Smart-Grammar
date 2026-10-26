@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     const welcomeButton = document.getElementById("welcomeButton");
     const searchButton = document.getElementById("searchButton");
@@ -6,59 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const message = document.getElementById("appMessage");
     const okButton = document.getElementById("messageOkButton");
 
-    function showMessage(text) {
-        if (!messageBox || !message) {
-            alert(text);
-            return;
-        }
-
-        message.textContent = text;
-        messageBox.style.display = "block";
-        messageBox.scrollIntoView({
-            behavior: "smooth",
-            block: "center"
-        });
-    }
-
-    if (welcomeButton) {
-        welcomeButton.addEventListener("click", function () {
-            showMessage("Welcome to Smart Grammar! 👩‍🎓");
-        });
-    }
-
-    if (searchButton && searchInput) {
-        searchButton.addEventListener("click", function () {
-            const searchText = searchInput.value.trim().toLowerCase();
-
-            if (searchText === "") {
-                showMessage("Please enter a grammar topic.");
-                return;
-            }
-
-            const pageText = document.body.innerText
-                .toLowerCase()
-                .replace(/topic found!|topic not found\./g, "");
-
-            if (pageText.includes(searchText)) {
-                showMessage("Topic found! 🔎");
-            } else {
-                showMessage("Topic not found. 😕");
-            }
-        });
-    }
-
-    if (okButton) {
-        okButton.addEventListener("click", function () {
-            messageBox.style.display = "none";
-
-            if (searchInput) {
-                searchInput.value = "";
-            }
-        });
-    }
-});
-
-    // Show message inside the centered box
+    // Show message in the box
     function showMessage(text) {
         if (messageBox && message) {
             message.textContent = text;
@@ -73,7 +22,34 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // OK button closes the message box
+    // Click Me button
+    if (welcomeButton) {
+        welcomeButton.addEventListener("click", function () {
+            showMessage("Welcome to Smart Grammar! 👩‍🎓");
+        });
+    }
+
+    // Search button
+    if (searchButton && searchInput) {
+        searchButton.addEventListener("click", function () {
+            const searchText = searchInput.value.trim().toLowerCase();
+
+            if (searchText === "") {
+                showMessage("Please enter a grammar topic.");
+                return;
+            }
+
+            const pageText = document.body.innerText.toLowerCase();
+
+            if (pageText.includes(searchText)) {
+                showMessage("Topic found! 🔎");
+            } else {
+                showMessage("Topic not found. 😕");
+            }
+        });
+    }
+
+    // OK button
     if (okButton) {
         okButton.addEventListener("click", function () {
             if (messageBox) {
@@ -87,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-```
+
 
 // Smart Grammar Quiz
 
