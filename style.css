@@ -919,6 +919,19 @@ body footer p {
     border-radius: 14px !important;
     box-sizing: border-box !important;
 }
+#appMessage {
+    display: block;
+    width: calc(100% - 24px);
+    max-width: 600px;
+    margin: 12px auto;
+    padding: 12px;
+    text-align: center;
+    color: #1e293b;
+    background: #ffffff;
+    border: 1px solid #c7d2fe;
+    border-radius: 10px;
+    overflow-wrap: anywhere;
+}
 
 
 
