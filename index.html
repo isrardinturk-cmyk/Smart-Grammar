@@ -8545,14 +8545,23 @@
             <p>2026 Smart Grammar / Learn Grammar Easily</p>
         </footer>
 
-        <div class="search-box">
-    <input type="text" id="grammar-search" placeholder="Search grammar topic...">
+        ```html
+<div class="search-box">
+    <input
+        type="text"
+        id="grammar-search"
+        placeholder="Search grammar topic..."
+    >
     <button id="searchButton">Search</button>
 </div>
 
-<p id="appMessage" role="status" aria-live="polite"></p>
+<div id="appMessageBox" class="message-box" style="display: none;">
+    <p id="appMessage" role="status" aria-live="polite"></p>
+    <button id="messageOkButton" type="button">OK</button>
+</div>
 
 <script src="script.js"></script>
+```
     </body>
     </html>
 
