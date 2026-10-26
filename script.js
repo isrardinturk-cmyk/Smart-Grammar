@@ -1,21 +1,31 @@
-```javascript
 document.addEventListener("DOMContentLoaded", function () {
-    const button = document.getElementById("welcomeButton");
+    const welcomeButton = document.getElementById("welcomeButton");
     const searchButton = document.getElementById("searchButton");
     const searchInput = document.getElementById("grammar-search");
-
     const messageBox = document.getElementById("appMessageBox");
     const message = document.getElementById("appMessage");
     const okButton = document.getElementById("messageOkButton");
 
-    // Welcome button
-    if (button) {
-        button.addEventListener("click", function () {
+    function showMessage(text) {
+        if (!messageBox || !message) {
+            alert(text);
+            return;
+        }
+
+        message.textContent = text;
+        messageBox.style.display = "block";
+        messageBox.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+    }
+
+    if (welcomeButton) {
+        welcomeButton.addEventListener("click", function () {
             showMessage("Welcome to Smart Grammar! 👩‍🎓");
         });
     }
 
-    // Search button
     if (searchButton && searchInput) {
         searchButton.addEventListener("click", function () {
             const searchText = searchInput.value.trim().toLowerCase();
@@ -25,7 +35,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
-            const pageText = document.body.innerText.toLowerCase();
+            const pageText = document.body.innerText
+                .toLowerCase()
+                .replace(/topic found!|topic not found\./g, "");
 
             if (pageText.includes(searchText)) {
                 showMessage("Topic found! 🔎");
@@ -34,6 +46,17 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+    if (okButton) {
+        okButton.addEventListener("click", function () {
+            messageBox.style.display = "none";
+
+            if (searchInput) {
+                searchInput.value = "";
+            }
+        });
+    }
+});
 
     // Show message inside the centered box
     function showMessage(text) {
